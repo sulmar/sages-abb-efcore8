@@ -1,0 +1,17 @@
+@Host = https://localhost:7145
+
+
+GET {{Host}}/api/customers/1
+
+###
+
+GET {{Host}}/api/customers
+
+###
+DELETE {{Host}}/api/customers/1
+
+###
+
+
+###
+GET {{Host}}/api/rentals/1

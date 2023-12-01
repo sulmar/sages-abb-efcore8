@@ -31,3 +31,7 @@ workCore.SqlServer
 
 
 dotnet ef dbcontext scaffold "Data Source=(local);Initial Catalog=sakila;Integrated Security=True;TrustServerCertificate=True"  Microsoft.EntityFrameworkCore.SqlServer -f -o Infrastructure -n Sages.ABB.Infrastructure
+
+
+
+ dotnet ef dbcontext scaffold "Name=ConnectionStrings:Sakila" Microsoft.EntityFrameworkCore.SqlServer -o ..\Sakila.Domain\Model  --context-dir ..\Sakila.Infrastructure\ -f -n Sakila.Domain.Model --context-namespace Sakila.Intrastructure
