@@ -12,7 +12,7 @@ Do rozpoczęcia tego kursu potrzebujesz następujących rzeczy:
 ## Sklonuj repozytorium Git
 
 ```
-git clone [https://github.com/sulmar/pw-mini-winter2023-net](https://github.com/sulmar/sages-abb-efcore8)
+git clone [https://github.com/sulmar/sages-abb-efcore8](https://github.com/sulmar/sages-abb-efcore8)
 ```
 
 ## Podstawy
