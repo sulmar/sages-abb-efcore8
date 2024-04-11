@@ -6,7 +6,7 @@ Zakładając, że masz encje takie jak Film i Category , możesz użyć _UseSpli
 var films = context.Customers
 			  .Include(c => c.Store)
 			  .Where(c => c.Active == "1")
-			  .UseSplitQuery()
+			  .AsSplitQuery()
 			  .ToList();	
 ~~~
 
