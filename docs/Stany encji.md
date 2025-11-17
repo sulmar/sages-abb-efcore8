@@ -1,33 +1,25 @@
 
-~~~ mermaid
-graph TD
+``` mermaid
+stateDiagram-v2
+    [*] --> Detached: new T
+    [*] --> Unchanged: First(), ToList()
 
-  Detached[Detached]
+    Detached --> Unchanged: Attach
+    Detached --> Added: Add
 
-  Added[Added]
+    Unchanged --> Modified: SetProperty
+    Modified --> Unchanged: SaveChanges
 
-  Unchanged[Unchanged]
+    Unchanged --> Deleted: Remove
+    Modified --> Deleted: Remove
 
-  Modified[Modified]
+    Deleted --> Detached: SaveChanges
 
-  Deleted[Deleted]
+    Added --> Unchanged: SaveChanges
+    Added --> Detached: Remove
 
-  
-
-  Detached -->|Add| Added
-
-  Detached -->|Attach| Unchanged
-
-  Unchanged -->|Update| Modified
-
-  Unchanged -->|Remove| Deleted
-
-  Added -->|SaveChanges| Unchanged
-
-  Modified -->|SaveChanges| Unchanged
-
-  Deleted -->|SaveChanges| Detached
-  ~~~
+    Unchanged --> Detached: SaveChanges (no tracking)
+```
 
 | Stan | Opis |
 | ---- | ---- |
